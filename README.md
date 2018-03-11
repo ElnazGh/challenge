@@ -5,7 +5,7 @@ Static site generator in Node.js
 ## Setup
 
 ```console
-$ npm i
+$ npm install
 $ npm run build
 $ npm run serve
 ```
