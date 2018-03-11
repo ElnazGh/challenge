@@ -1,0 +1,26 @@
+[{
+  "item1": {
+	  "imageName": "image-768x300.png",
+	  "title": "Title",
+	  "subtitle": "Subtitle",
+	  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit ullamcorper dui et congue. Vivamus dignissim nisi vel mollis porta. Fusce vel ultricies purus. In consectetur nibh odio, mattis varius purus faucibus in. mattis varius purus faucibus in.",
+	  "caption": "Image Caption",
+	  "captionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit ullamcorper"
+	},
+	"item2": {
+	  "imageName": "image-372x300.png",
+	  "title": "Title",
+	  "subtitle": "Subtitle",
+	  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit ullamcorper dui et congue. Vivamus dignissim nisi vel mollis porta. Fusce vel ultricies purus. In consectetur nibh odio, mattis varius purus faucibus in. mattis varius purus faucibus in.",
+	  "caption": "Image Caption",
+	  "captionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit ullamcorper"
+	},
+	"item3": {
+	  "imageName": "image-372x300.png",
+	  "title": "Title",
+	  "subtitle": "Subtitle",
+	  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit ullamcorper dui et congue. Vivamus dignissim nisi vel mollis porta. Fusce vel ultricies purus. In consectetur nibh odio, mattis varius purus faucibus in. mattis varius purus faucibus in.",
+	  "caption": "Image Caption",
+	  "captionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit ullamcorper"
+	}
+}]

@@ -1,0 +1,354 @@
+/* Main Menu */
+.toggle,
+[id^=drop] {
+	display: none;
+}
+
+#logo {
+	display: inline-block;
+	float: left;
+	padding: 0 30px 0 0;
+	font-size: 18px;
+	line-height: 38px;
+    color: #fff;
+    text-decoration: none;
+
+	.fa {
+		font-size: 22px;
+		margin-right: 10px;
+		color: #6ac3b5;
+	}
+}
+
+.toggle.btn + .btn {
+	margin-left: 0;	
+}
+
+.menu {
+	.fa {
+		margin-right: 6px;
+
+		&.fa-angle-down { 
+			margin-right: 0;
+			margin-left: 3px;
+		}
+	}
+
+	li > a:only-child:after { 
+		content: ''; 
+	}
+}
+.checkbox-container {
+	position: relative;
+	display: inline-block;
+	float: right;
+}
+
+.checkbox-trigger {
+	display: none;
+}
+
+.hamburger-menu {
+	display: none;
+}
+
+.menu-content {
+
+	ul {
+		float: right;
+		padding:0;
+		margin:0;
+		list-style: none;
+		position: relative;
+
+		/* Positioning the navigation items inline */
+		li {
+			margin: 0px;
+			display:inline-block;
+			float: left;
+
+			&:hover > ul {
+				display: block;
+			    background-color: #32384f;
+			    border-radius: 0 0 3px 3px;
+
+			    li a {
+			    	color: #fff;
+
+			    	&:hover {
+					    background-color: rgba(255, 255, 255, 0.2);
+			    		color: #fcf769;
+			    	}
+			    }
+			}
+		}
+
+		ul {
+			display: none;
+			position: absolute; 
+			top: 43px; 
+
+			/* Fisrt Tier Dropdown */
+			li {
+				width:170px;
+				float:none;
+				display:list-item;
+				position: relative;
+
+				a {
+					text-align: left;
+				}
+			}
+
+			ul li {
+				position: relative;
+				top:-60px;
+				left:170px; 
+			}
+		}
+	}
+
+	/* Styling the links */
+	a {
+		display:block;
+		padding: 10px 20px 12px;	
+		color:#FFF;
+		font-size:14px;
+		text-decoration:none;
+
+		&:hover {  
+			color: #fcf769;
+		}
+	} 
+}
+
+/* Media Queries */
+
+@media screen and (max-width : 768px) {
+
+	.toggle + a {
+		display: none;
+	}
+
+	.toggle {
+	    display: block;
+	    padding: 14px 20px;
+	    color: #FFF;
+	    font-size: 14px;
+	    text-decoration: none;
+	}
+
+	.toggle:hover {
+	    background-color: #000000;
+	}
+
+	.checkbox-trigger:checked + .menu-content .menu {
+		width: 200px;
+		height: auto;
+		margin-top: 25px;
+		transition: width 0.7s ease 0.3s, height 0.3s ease;
+	}
+
+	.menu-content {
+		display: flex;
+		color: white;
+		float: right;
+		height: auto;
+		z-index: 200;
+
+		a.btn, label.btn {
+			padding: 15px 20px;
+			text-align: left;
+			background: transparent;
+			-webkit-transition: color 0.3s ease;
+			transition: color 0.3s ease;
+		}	
+
+		.menu {
+			display: block;
+			padding-left: 0;
+			margin: 0;
+			width: 0px;
+			height: 0px;
+			overflow: hidden;
+			transition: height 0.3s ease 0.7s, width 0.7s ease;
+			z-index: 300;
+		}
+	}
+
+	.checkbox-container {
+		display: block;
+		float: right;
+		width: 50px;
+	    height: 100%;
+	    position: fixed;
+	    top: 0;
+	    right: 0;
+	    z-index: 200;
+	}
+
+	.checkbox-trigger {
+		display: block;
+		position: absolute;
+		top: 1px;
+		right: 6px;
+		width: 50px;
+		height: 50px;
+		opacity: 0;
+		cursor: pointer;
+		z-index: 5;
+	}
+
+	.hamburger-menu, .hamburger-menu::before, .hamburger-menu::after {
+	    display: block;
+	    position: absolute;
+	    background: white;
+	    width: 34px;
+	    height: 2px;
+	    margin: 10px 48px;
+	    transition: background 0.3s;
+	}
+
+	.hamburger-menu::before, .hamburger-menu::after {
+	    content: '';
+	    position: absolute;
+	    margin: -10px 0 0;
+	    transition: width 0.7s ease 0.3s, transform 0.7s ease 0.3s;
+	}
+
+	.hamburger-menu::after {
+	   margin-top: 10px; 
+	}
+
+	.hamburger-menu {
+	  position: relative;
+	  display: block;
+	  margin: 0;
+	  margin-top: 27px;
+	  margin-right: 15px;
+	  margin-left: 5px;
+	  margin-bottom: 23px;
+	  transition: width 0.3s ease;
+	}
+
+	.checkbox-trigger:checked {
+	  right: 0;
+	}
+
+	.checkbox-trigger:checked + .menu-content {
+		height: 100%;
+		background: #3d6c6b;
+	}
+
+	.checkbox-trigger:checked + .menu-content .hamburger-menu {
+	  width: 2em;
+	  
+	  transition: width 0.7s ease 0.7s;
+	}
+
+	.checkbox-trigger:checked + .menu-content .hamburger-menu::before {
+	  width: 19px;
+	  transform: rotate(-35deg);
+	  margin-top: -0.4em;
+	}
+
+	.checkbox-trigger:checked + .menu-content .hamburger-menu::after {
+	  width: 1.2em;
+	  transform: rotate(35deg);
+	  margin-top: 0.4em;
+	}
+
+	/* Display Dropdown when clicked on Parent Lable */
+	[id^=drop]:checked + ul {
+		display: block;
+	}
+
+	.menu-content ul li > [id^=drop]:checked + ul {
+		display: block;
+		background-color: rgba(255, 255, 255, 0.2);
+
+		li a {
+
+			color: #fff;
+
+			&:hover {
+				background-color: #4c7877;
+				color: #fcf769;
+			}
+		}
+	}
+
+	/* Change menu item's width to 100% */
+	.menu-content ul li {
+		display: block;
+		width: 100%;
+	}
+
+	.menu-content ul ul .toggle,
+	.menu-content ul ul a {
+		padding: 0 40px;
+	}
+
+	.menu-content ul ul ul a {
+		padding: 0 80px;
+	}
+
+	.menu-content a:hover,
+ 	.menu-content ul ul ul a, 
+ 	.menu-content label.btn:hover {
+		color: #fcf769;
+	}
+  
+	.menu-content ul li ul li .toggle,
+	.menu-content ul ul a,
+  	.menu-content ul ul ul a{
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:14px; 
+		text-align: left;
+	}
+  
+  
+	.menu-content ul li ul li .toggle,
+	.menu-content ul ul a {
+	   /*background-color: rgba(255, 255, 255, 0.08);*/ 
+	}
+
+	/* Hide Dropdowns by Default */
+	.menu-content ul ul {
+		float: none;
+		position:static;
+		color: #ffffff;
+		/* has to be the same number as the "line-height" of "nav a" */
+	}
+		
+	/* Hide menus on hover */
+	.menu-content ul ul li:hover > ul,
+	.menu-content ul li:hover > ul {
+		display: none;
+	}
+		
+	/* Fisrt Tier Dropdown */
+	.menu-content ul ul li {
+		display: block;
+		width: 100%;
+	}
+
+	.menu-content ul ul ul li {
+		position: static;
+		/* has to be the same number as the "width" of "nav ul ul li" */ 
+
+	}
+
+}
+
+@media screen and (max-width : 330px) {
+
+	nav ul li {
+		display:block;
+		width: 94%;
+	}
+
+}
+
+/* End - Main Menu */

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en">
+    <head>
+      <%- include('../partials/head') %>
+    </head>
+    <body>
+        <section class="page-container">
+            <!-- main header -->
+            <%- include('../partials/header') %>
+            <!-- end - main header -->
+
+            <!-- subheader -->
+            <%- include('../partials/otherPagesSubHeader') %>
+            <!-- end - subheader -->
+
+            <!-- timeline-wrapper -->
+            <section class="main-content timeline-wrapper">
+                <!-- timeline -->
+                <ul class="timeline">
+                    <li class="bar"></li>
+                </ul>
+                <!-- End - timeline -->
+
+                <!-- guide -->
+                <%- include('../partials/guide') %>
+                <!-- end - guide -->
+
+            </section>
+            <!-- End - timeline-wrapper -->
+
+        </section>
+        <!-- end - page-container -->
+
+        <!-- Footer -->
+        <%- include('../partials/footer') %>
+        <!-- End - Footer -->
+
+        <!-- popup - Terms of use -->
+        <%- include('../partials/popup') %>
+        <!-- end - popup - Terms of use -->
+    </body>
+</html>

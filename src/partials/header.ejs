@@ -1,0 +1,51 @@
+<!-- header -->
+<section class="header">
+    <div class="main-content">
+        <a id="logo" href="<%= site.basePath %>/" target="_self" title="logo" >
+            <i class="fa fa-pagelines"></i>Your Logo here
+        </a>
+        <!-- Menu -->
+        <span class="checkbox-container">
+            <input class="checkbox-trigger" type="checkbox"  />
+            <span class="menu-content">
+                <ul class="menu">
+                    <li>
+                        <a href="<%= site.basePath %>/" targt="_self" title="Home" class="btn">
+                            <i class="fa fa-home"></i>Home
+                        </a>
+                    </li>
+                    <li>
+                        <!-- First Tier Drop Down -->
+                        <label for="drop-1" class="btn toggle has-sub">
+                            <i class="fa fa-question-circle"></i>Help Centre <i class="fa fa-angle-down"></i>
+                        </label>
+                        <a href="<%= site.basePath %>/help-centre/guide" targt="_self" title="Help Centre" class="btn">
+                            <i class="fa fa-question-circle"></i>Help Centre <i class="fa fa-angle-down"></i>
+                        </a>
+                        <input type="checkbox" id="drop-1" class="drop-1"/>
+                        <ul>
+                            <li>
+                                <a href="<%= site.basePath %>/help-centre/guide" targt="_self" title="Guide"><i class="fa fa-th-list"></i>Guide</a>
+                            </li>
+                            <li>
+                                <a href="<%= site.basePath %>/help-centre/libraries" targt="_self" title="Libraries"><i class="fa fa-list-alt"></i>Libraries</a>
+                            </li>
+                        </ul> 
+                    </li>
+                    <li>
+                        <a href="<%= site.basePath %>/About" targt="_self" title="About" class="btn"><i class="fa fa-user"></i>About</a>
+                    </li>
+                    <li>
+                        <a href="<%= site.basePath %>/contact" targt="_self" title="Contact" class="btn">
+                            <i class="fa fa-globe"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+              <span class="hamburger-menu"></span>
+            </span>
+        </span> 
+        <!-- End - Menu -->  
+    </div>
+
+</section>
+<!-- end - header -->

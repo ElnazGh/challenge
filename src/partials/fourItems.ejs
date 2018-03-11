@@ -1,0 +1,21 @@
+<!-- The data below is coming from a JSON file. -->
+
+<!-- main-content -->
+<section class="main-content">
+    <h3 class="h-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+    <!-- four items -->
+    <section data-name="items" class="items-container">
+        <% site.items.forEach((item) => { %>
+        <figure class="itemEffect">
+            <i class="fa fa-envira"></i>
+            <figcaption>
+                <h2><%= item.title %></h2>
+                <p>View more</p>
+                <a href="<%= item.url %>" targt="_self" title="View more"></a>
+            </figcaption>      
+        </figure>
+        <% }) %>
+    </section> 
+    <!-- end - four items -->
+</section>
+<!-- end - main-content -->

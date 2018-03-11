@@ -1,0 +1,97 @@
+<!-- The data below is coming from a JSON file. -->
+
+<!-- imageSec-container -->
+<% site.imageSection.forEach((elem) => { %>
+<section class="imageSec-container">
+    <section class="main-content">
+
+        <!-- Start Full Image section with Caption --> 
+        <div class="imageSection singleImg">
+            <div id="popupContainerA" class="imgColumn">
+                <img src="assets/images/<%= elem.item1.imageName%>" alt="<%= elem.item1.caption %>" class="imgResponsive"/>
+                <a class="plus-btn" href="#" data-popup-open="popupA"></a>
+                 
+                <!-- popupA -->
+                <div class="popup" data-popup="popupA">
+                    <div class="popup-inner mainHeaderText">
+                        <div class="popup-header"><%= elem.item1.title %></div>
+                        <div class="popup-content">
+                            <h2><%= elem.item1.subtitle %></h2>
+                            <p><%= elem.item1.description %></p>
+                            <a class="popup-close" href="#" data-popup-close="popupA"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end - popupA -->
+           </div>
+            <div class="imgCaption singleImgCaption">
+                <hr/>
+                <h4><%= elem.item1.caption %></h4>
+                <p><%= elem.item1.captionDescription %></p>
+            </div>
+        </div>
+        <!-- End Full Image with Caption-->
+
+        <!-- Start Double Image section with Caption --> 
+        <div class="imageSection doubleImg">
+            <div class="imgColumn">
+                <div id="popupContainerB" class="doubleColumn marginR5">
+                    <img src="assets/images/<%= elem.item2.imageName%>" alt="<%= elem.item2.caption %>" class="imgResponsive"/>
+                
+                    <a class="plus-btn" href="#" data-popup-open="popupB"></a>
+                    
+                    <!-- popupB -->
+                    <div class="popup" data-popup="popupB">
+                        <div class="popup-inner mainHeaderText">
+                           <div class="popup-header"><%= elem.item2.title %></div>
+                           <div class="popup-content">
+                                <h2><%= elem.item2.subtitle %></h2>
+                                <p><%= elem.item2.description %></p>
+                                <a class="popup-close" href="#" data-popup-close="popupB"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end - popupB -->
+                 
+                </div>
+                <div id="popupContainerC" class="doubleColumn">
+                    <img src="assets/images/<%= elem.item3.imageName%>" alt="<%= elem.item3.caption %>" class="doubleImg imgResponsive" />
+                 
+                    <a class="plus-btn" href="#" data-popup-open="popupC"></a>
+                    
+                    <!-- popupC -->
+                    <div class="popup" data-popup="popupC">
+                        <div class="popup-inner mainHeaderText">
+                           <div class="popup-header"><%= elem.item3.title %></div>
+                           <div class="popup-content">
+                                <h2><%= elem.item3.subtitle %></h2>
+                                <p><%= elem.item3.description %>.</p>
+                                <a class="popup-close" href="#" data-popup-close="popupC"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end - popupC -->
+                </div>
+
+            </div>
+            <!-- End - imgColumn -->
+
+            <div class="imgCaption">
+                <div class="doubleCaptionColumn">
+                    <hr/>
+                    <h4><%= elem.item2.caption %></h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="doubleCaptionColumn">
+                    <hr/>
+                    <h4><%= elem.item3.caption %></h4>
+                    <p><%= elem.item3.captionDescription %></p>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Double Image section with Caption -->
+    </section>
+</section>
+<% }) %>
+<!-- End - imageSec-container -->

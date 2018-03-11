@@ -1,0 +1,84 @@
+/* Timline */
+.timeline {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: fixed;
+    top: 250px;
+    width: 2px;
+    height: 90%;
+    background: rgba(70,76,99,1);
+
+    .bar {
+        position: absolute;
+        width: 2px;
+        background-color: #fcf769;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+}
+
+.container {
+    padding-left: 200px;
+}
+.node {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #32384f;
+    left: -1px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 4px;
+  
+    &:hover {
+        background: #46ffdd;
+        span {
+            opacity: 1;
+        }
+    }
+  
+    &:before{
+        content: "";
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        left: -3px;
+        top: -3px;
+    }
+  
+    span {
+        transition: all .4s ease-out;
+        text-transform: uppercase;
+        right: 4px;
+        top: -16px;
+        color: #32384f;
+        position: absolute;
+        padding: 10px;
+        white-space: nowrap;
+        font-size: 10px;
+        font-weight: 200;
+        opacity: 0;
+    }
+}
+
+@media screen and (min-width : 1200px) {
+    .timeline {
+        left: 80px;
+    }
+}
+
+@media screen and (min-width : 768px) and (max-width: 1199px) {
+    .timeline {
+        left: 30px;
+    }
+}
+@media screen and (max-width : 768px) {    
+    .timeline {
+        display: none;
+    }
+}
+
+/* End - Timline */
