@@ -211,8 +211,12 @@
 @media screen and (min-width: 1024px) {
 
 	.items-container .itemEffect {
-	    min-width: 224px;
-	    width: calc(100%/4 - 3px);
+	    min-width: 240px;
+	    width: -webkit-calc(25% - 3px);
+		width: expression(25% - 3px);
+		width: -moz-calc(25% - 3px);
+		width: -o-calc(25% - 3px);
+		width: calc(25% - 3px);
 
 	    figcaption {
 		    padding: 15px
@@ -246,7 +250,11 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 	.items-container .itemEffect {
 	    min-width: 224px;
-	    width: calc(100%/2 - 4px);
+	    width: -webkit-calc(50% - 4px);
+		width: expression(50% - 4px);
+		width: -moz-calc(50% - 4px);
+		width: -o-calc(50% - 4px);
+		width: calc(50% - 4px);
 	    margin: 2px 2px 2px 2px;
 
 	    h2 {
