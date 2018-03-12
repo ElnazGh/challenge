@@ -1,13 +1,17 @@
 [{
   "title": "Planning & Design",
+  "icon": "fa-envira",
   "url": "http://example.com/planningNDesign"
 },{
   "title": "Development & Testing",
+  "icon": "fa-code",
   "url": "http://example.com/developmentNTesting"
 },{
   "title": "Launch & Maintenance",
+  "icon": "fa-recycle",
   "url": "http://example.com/launchNMaintenance"
 },{
   "title": "Graphs & Report",
+  "icon": "fa-signal",
   "url": "http://example.com/graphsNReport"
 }]

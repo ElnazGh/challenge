@@ -7,7 +7,7 @@
     <section data-name="items" class="items-container">
         <% site.items.forEach((item) => { %>
         <figure class="itemEffect">
-            <i class="fa fa-envira"></i>
+            <i class="fa <%= item.icon %>"></i>
             <figcaption>
                 <h2><%= item.title %></h2>
                 <p>View more</p>
